@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+
+  <test name="CoreClasses">
+    <classes>
+      <class name="gui.core.Buffer2DTest"/>
+    </classes>
+  </test>
+
+  <test name="ObjClasses">
+    <classes>
+      <class name="obj.BoxTest"/>
+    </classes>
+  </test>
+
+  <test name="GuiClasses">
+    <classes>
+      <class name="gui.ComponentTest"/>
+    </classes>
+  </test>
+</suite> <!-- Suite -->

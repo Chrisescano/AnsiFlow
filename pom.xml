@@ -14,4 +14,33 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.17</version> <!-- Use latest -->
+    </dependency>
+
+    <!-- Log4j2 Implementation -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.24.3</version> <!-- Use latest -->
+    </dependency>
+
+    <!-- Log4j2 SLF4J Bridge (connects SLF4J API to Log4j2 backend) -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j2-impl</artifactId>
+      <version>2.24.3</version> <!-- Use latest -->
+    </dependency>
+
+    <!-- Testing Library -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 </project>

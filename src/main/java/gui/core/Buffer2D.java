@@ -1,7 +1,7 @@
 package gui.core;
 
 import java.util.Arrays;
-import obj.Dimension;
+import gui.obj.Dimension;
 
 public class Buffer2D {
 

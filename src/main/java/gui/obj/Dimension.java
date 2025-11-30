@@ -1,4 +1,4 @@
-package obj;
+package gui.obj;
 
 import java.util.Objects;
 

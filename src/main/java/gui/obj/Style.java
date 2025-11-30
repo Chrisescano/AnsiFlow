@@ -1,4 +1,4 @@
-package obj;
+package gui.obj;
 
 import gui.core.BoxRegion;
 
@@ -31,6 +31,18 @@ public class Style {
   }
 
   // Methods
+
+  public void apply(Style style) {
+    setTopLeft(style.topLeft);
+    setTop(style.top);
+    setTopRight(style.topRight);
+    setLeft(style.left);
+    setCenter(style.center);
+    setRight(style.right);
+    setBottomLeft(style.bottomLeft);
+    setBottom(style.bottom);
+    setBottomRight(style.bottomRight);
+  }
 
   public Character getChar(BoxRegion boxRegion) {
     if (boxRegion == null) {

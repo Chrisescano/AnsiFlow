@@ -1,9 +1,10 @@
 package gui;
 
+import gui.core.BoxModel;
 import gui.core.Buffer2D;
-import obj.Box;
-import obj.Dimension;
-import obj.Style;
+import gui.obj.Box;
+import gui.obj.Dimension;
+import gui.obj.Style;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -31,9 +32,10 @@ public class ComponentTest {
   public void testRenderingDefault() {
     // Given
     TestComponent component = new TestComponent();
+    BoxModel boxModel = component.getBoxModel();
 
     // When
-    component.update();
+    boxModel.update();
     Buffer2D componentBuffer = component.render();
 
     // Then
@@ -48,10 +50,11 @@ public class ComponentTest {
     Buffer2D contentBuff = Buffer2D.create(new Dimension(2, 2));
     contentBuff.write(0, 0, new char[]{'x', 'x', 'x', 'x'});
     TestComponent component = new TestComponent(contentBuff);
-    component.setDimension(new Dimension(contentBuff.getWidth(), contentBuff.getHeight()));
+    BoxModel boxModel = component.getBoxModel();
+    boxModel.setDimension(contentBuff.getWidth(), contentBuff.getHeight());
 
     // When
-    component.update();
+    boxModel.update();
     Buffer2D componentBuffer = component.render();
 
     // Then
@@ -65,17 +68,18 @@ public class ComponentTest {
   public void testRenderingBorderOnly() {
     // Given
     TestComponent component = new TestComponent();
+    BoxModel boxModel = component.getBoxModel();
 
     Box border = new Box();
     border.setThickness(1);
-    component.setBorder(border);
+    boxModel.setBorder(border);
 
     Style borderStyle = new Style();
     borderStyle.setCorners('+');
-    component.setBorderStyle(borderStyle);
+    boxModel.setBorderStyle(borderStyle);
 
     // When
-    component.update();
+    boxModel.update();
     Buffer2D componentBuffer = component.render();
 
     // Then
@@ -91,19 +95,21 @@ public class ComponentTest {
     Buffer2D contentBuff = Buffer2D.create(new Dimension(2, 2));
     contentBuff.write(0, 0, new char[]{'x', 'x', 'x', 'x'});
     TestComponent component = new TestComponent(contentBuff);
-    component.setDimension(new Dimension(contentBuff.getWidth(), contentBuff.getHeight()));
+    BoxModel boxModel = component.getBoxModel();
+
+    boxModel.setDimension(contentBuff.getWidth(), contentBuff.getHeight());
 
     Box border = new Box();
     border.setThickness(1);
-    component.setBorder(border);
+    boxModel.setBorder(border);
 
     Style borderStyle = new Style();
     borderStyle.setCorners('+');
     borderStyle.setEdges('-');
-    component.setBorderStyle(borderStyle);
+    boxModel.setBorderStyle(borderStyle);
 
     // When
-    component.update();
+    boxModel.update();
     Buffer2D componentBuffer = component.render();
 
     // Then

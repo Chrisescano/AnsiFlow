@@ -1,7 +1,6 @@
 package gui.core;
 
-import com.beust.ah.A;
-import obj.Dimension;
+import gui.obj.Dimension;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

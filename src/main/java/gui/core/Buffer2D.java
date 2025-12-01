@@ -1,5 +1,6 @@
 package gui.core;
 
+import gui.GuiUtil;
 import java.util.Arrays;
 import gui.obj.Dimension;
 

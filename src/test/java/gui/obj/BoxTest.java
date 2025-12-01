@@ -1,8 +1,6 @@
 package gui.obj;
 
-import gui.core.BoxRegion;
-import gui.obj.Box;
-import gui.obj.Dimension;
+import gui.enums.BoxRegion;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

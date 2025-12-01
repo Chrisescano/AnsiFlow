@@ -1,18 +1,12 @@
 package gui.component;
 
 import gui.core.BoxModel;
-import gui.core.BoxRegion;
+import gui.enums.BoxRegion;
 import gui.core.Buffer2D;
 import gui.obj.Box;
 import gui.obj.Style;
 
 public abstract class Component {
-
-  /*
-  Potential improvement:
-  - if we know the 'size' of the content, there should be a method that will update sizing
-  - might be useful to have a pre-render step to update sizing, dimensions, and do all calculations
-   */
 
   protected final BoxModel boxModel = new BoxModel();
 

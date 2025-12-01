@@ -1,4 +1,4 @@
-package gui.core;
+package gui;
 
 public class GuiUtil {
 

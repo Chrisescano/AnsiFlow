@@ -1,5 +1,6 @@
 package gui.core;
 
+import gui.enums.BoxSizing;
 import gui.obj.Box;
 import gui.obj.Style;
 

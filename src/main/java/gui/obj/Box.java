@@ -1,7 +1,7 @@
 package gui.obj;
 
-import gui.core.BoxRegion;
-import gui.core.GuiUtil;
+import gui.enums.BoxRegion;
+import gui.GuiUtil;
 import java.util.Objects;
 
 public class Box {

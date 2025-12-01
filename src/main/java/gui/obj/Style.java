@@ -1,6 +1,6 @@
 package gui.obj;
 
-import gui.core.BoxRegion;
+import gui.enums.BoxRegion;
 
 public class Style {
 

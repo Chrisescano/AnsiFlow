@@ -21,6 +21,10 @@ public class Box {
     this.dimension = dimension;
   }
 
+  public Box(int top, int left, int right, int bottom) {
+    this(new Dimension(), top, left, right, bottom);
+  }
+
   public Box(Dimension dimension, int top, int left, int right, int bottom) {
     this.dimension = dimension;
     this.top = top;

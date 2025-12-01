@@ -43,6 +43,10 @@ public class Buffer2D {
     return new Buffer2D(dimension);
   }
 
+  public static Buffer2D create(int width, int height) {
+    return create(new Dimension(width, height));
+  }
+
   public char read(int x, int y) throws IndexOutOfBoundsException {
     int index = toIndex(x, y);
     if (index != Integer.MIN_VALUE) {

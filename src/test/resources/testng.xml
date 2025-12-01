@@ -10,13 +10,14 @@
 
   <test name="ObjClasses">
     <classes>
-      <class name="obj.BoxTest"/>
+      <class name="gui.obj.BoxTest"/>
     </classes>
   </test>
 
   <test name="GuiClasses">
     <classes>
-      <class name="gui.ComponentTest"/>
+      <class name="gui.component.ComponentTest"/>
+      <class name="gui.component.LabelTest"/>
     </classes>
   </test>
 </suite> <!-- Suite -->

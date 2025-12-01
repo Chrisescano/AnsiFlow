@@ -1,4 +1,4 @@
-package gui;
+package gui.component;
 
 import gui.core.BoxModel;
 import gui.core.Buffer2D;

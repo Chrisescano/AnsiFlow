@@ -1,4 +1,4 @@
-package gui;
+package gui.component;
 
 import gui.core.BoxModel;
 import gui.core.BoxRegion;
@@ -14,11 +14,15 @@ public abstract class Component {
   - might be useful to have a pre-render step to update sizing, dimensions, and do all calculations
    */
 
-  private final BoxModel boxModel = new BoxModel();
+  protected final BoxModel boxModel = new BoxModel();
 
   // Methods
 
   protected abstract Buffer2D renderContent();
+
+  public void preRender() {
+    boxModel.update();
+  }
 
   public Buffer2D render() {
     Box margin = boxModel.getMargin();
@@ -31,13 +35,13 @@ public abstract class Component {
     Buffer2D contentBuffer = renderContent();
 
     if (paddingBuffer.getSize() > 0) {
-      paddingBuffer.layer(contentBuffer, padding.getTop(), padding.getLeft());
+      paddingBuffer.layer(contentBuffer, padding.getLeft(), padding.getTop());
     }
     if (borderBuffer.getSize() > 0) {
-      borderBuffer.layer(paddingBuffer, border.getTop(), border.getLeft());
+      borderBuffer.layer(paddingBuffer, border.getLeft(), border.getTop());
     }
     if (marginBuffer.getSize() > 0) {
-      marginBuffer.layer(borderBuffer, margin.getTop(), margin.getLeft());
+      marginBuffer.layer(borderBuffer, margin.getLeft(), margin.getTop());
     }
 
     return marginBuffer;

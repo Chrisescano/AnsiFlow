@@ -1,4 +1,4 @@
-package obj;
+package gui.obj;
 
 import gui.core.BoxRegion;
 import gui.obj.Box;

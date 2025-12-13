@@ -50,7 +50,22 @@ public class Container {
   }
 
   private Buffer2D renderVertical() {
-    return null;
+    List<Buffer2D> componentBuffers = renderComponentBuffers();
+
+    int width = 0, height = 0;
+    for (Buffer2D buffer : componentBuffers) {
+      height += buffer.getHeight();
+      width = Math.max(buffer.getWidth(), width);
+    }
+
+    Buffer2D containerBuffer = Buffer2D.create(width, height);
+    int offset = 0;
+    for (Buffer2D buffer : componentBuffers) {
+      containerBuffer.layer(buffer, 0, offset);
+      offset += buffer.getHeight();
+    }
+
+    return containerBuffer;
   }
 
   private Buffer2D renderGrid() {

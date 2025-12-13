@@ -4,6 +4,7 @@ import gui.core.BoxModel;
 import gui.enums.BoxRegion;
 import gui.core.Buffer2D;
 import gui.obj.Box;
+import gui.obj.Dimension;
 import gui.obj.Style;
 
 public abstract class Component {
@@ -61,5 +62,9 @@ public abstract class Component {
 
   public BoxModel getBoxModel() {
     return boxModel;
+  }
+
+  public Dimension getDimension() {
+    return boxModel.getMargin().getDimension();
   }
 }

@@ -5,6 +5,7 @@
   <test name="CoreClasses">
     <classes>
       <class name="gui.core.Buffer2DTest"/>
+      <class name="gui.core.ContainerTest"/>
     </classes>
   </test>
 
